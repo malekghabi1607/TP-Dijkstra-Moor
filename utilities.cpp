@@ -7,9 +7,9 @@ using namespace std;
 
 
 
-/****************************************/
-/* Objectif : Affichage de la matrice d'adjacence
-/****************************************/
+/***************************************
+ Objectif : Affichage de la matrice d'adjacence
+***************************************/
 void affichage(int *c[], int n)
 {
 	cout << "c = " << endl;
@@ -23,10 +23,10 @@ void affichage(int *c[], int n)
 }
 
 
-/****************************************/
-/* Objectif : Affichage du tableau des plus courts
+/***************************************
+Objectif : Affichage du tableau des plus courts
 chemins
-/****************************************/
+***************************************/
 void affichage(int d[], int n)
 {
 	cout << "d = " << endl;
@@ -38,8 +38,8 @@ void affichage(int d[], int n)
 
 
 
-/****************************************/
-/* Objectif : Algorithme de calcul des plus courts
+/***************************************
+Objectif : Algorithme de calcul des plus courts
 dans un graphe dont les arcs ont des longueurs positives.
 - c : matrice de longueur de chaque arc
 - d : tableau des plus courts chemins
@@ -47,7 +47,7 @@ dans un graphe dont les arcs ont des longueurs positives.
 pred[i] dans le plus court chemin.
 - n : nombre de sommets du graphe
 - s : sommet origine d'où les plus courts chemins sont calculés
-/****************************************/
+***************************************/
 void mooredijkstra(int *c[], int d[], int n, int s)
 {
 	const int INF = 1e9; // Représente l'infini
