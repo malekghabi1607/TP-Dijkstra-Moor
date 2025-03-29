@@ -50,5 +50,45 @@ pred[i] dans le plus court chemin.
 /****************************************/
 void mooredijkstra(int *c[], int d[], int n, int s)
 {
-	// A faire
+	const int INF = 1e9; // Représente l'infini
+	bool visite[n];
+
+	// Initialisation
+	for (int i = 0; i < n; i++)
+	{
+		d[i] = INF;
+		visite[i] = false;
+	}
+
+	d[s] = 0;
+
+	for (int count = 0; count < n - 1; count++)
+	{
+		// Trouver le sommet u non visité avec la plus petite distance
+		int u = -1;
+		int min = INF;
+
+		for (int i = 0; i < n; i++)
+		{
+			if (!visite[i] && d[i] < min)
+			{
+				min = d[i];
+				u = i;
+			}
+		}
+
+		if (u == -1)
+			break; // Tous les sommets accessibles ont été visités
+
+		visite[u] = true;
+
+		// Mise à jour des distances
+		for (int v = 0; v < n; v++)
+		{
+			if (c[u][v] > 0 && !visite[v] && d[u] + c[u][v] < d[v])
+			{
+				d[v] = d[u] + c[u][v];
+			}
+		}
+	}
 }
