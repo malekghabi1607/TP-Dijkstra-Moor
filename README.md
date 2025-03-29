@@ -55,6 +55,9 @@ g++ main.cpp utilities.cpp -o dijkstra
 ./dijkstra
 ```
 
+<img width="551" alt="Capture d’écran 2025-03-29 à 11 58 50" src="https://github.com/user-attachments/assets/0bd70bc0-db7e-4a38-8cdb-66bb9cb809e5" />
+
+
 ---
 
 ## 👤 Auteur
